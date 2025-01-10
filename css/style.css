@@ -367,5 +367,11 @@ p {
   padding: 0;
 }
 
+.real-estate-search-title {
+  font-size: 28px;
+  font-family: "Montserrat", Montserrat, sans-serif;
+  color: #2B3888;
+  font-weight: 500;
+}
 
 
