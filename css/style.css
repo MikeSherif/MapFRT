@@ -250,6 +250,24 @@ ul, li {
   padding: 0;
 }
 
+.button {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1248px;
+
+}
+
 
 #map>svg>g>path:hover {
   fill: #FF6224;
@@ -257,6 +275,20 @@ ul, li {
 
 p {
   margin: 0;
+}
+
+.page-description {
+  color: #2B3888;
+  font-size: 24px;
+  font-family: "Montserrat", Montserrat, sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  padding-bottom: 15px;
+}
+
+.map {
+  padding-left: 62px;
+  width: fit-content;
 }
 
 .popup {
@@ -315,6 +347,24 @@ p {
 .popup-content-list-element-count {
   align-self: center;
   font-weight: bold;
+}
+
+.searching-advantages {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searching-advantages-help {
+  font-size: 16px;
+  color: #2B3888;
+  background-color: transparent;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 20px;
+  margin-right: 31px;
+  width: 257px;
+  height: 39px;
+  padding: 0;
 }
 
 
