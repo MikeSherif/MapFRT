@@ -56,3 +56,18 @@ paths.forEach(path => {
 
   path.addEventListener('mouseout', hidePopup);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('open-select');
+  const select = document.getElementById('region-select');
+
+  button.addEventListener('click', () => {
+    select.focus(); // Устанавливаем фокус на select
+    select.size = select.options.length; // Разворачиваем список
+  });
+
+  // Скрытие раскрытого списка при потере фокуса
+  select.addEventListener('blur', () => {
+    select.size = 1; // Сворачиваем список
+  });
+});

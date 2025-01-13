@@ -352,15 +352,19 @@
     <h2 class="real-estate-search-title">Поиск недвижимости</h2>
     <div class="real-estate-search-controls">
       <div class="real-estate-search-controls-region_choose">
-        <select class="region-select">
+        <select class="region-select" id="region-select">
           <option value="" disabled selected>Выбор региона</option>
           <option value="moscow">Московская область</option>
           <option value="rostov">Ростовская область</option>
           <option value="kemerovo">Кемеровская область</option>
         </select>
+        <button id="open-select">></button>
       </div>
       <div class="real-estate-search-controls-zhilcomplex-search">
-
+        <form>
+          <input type="text" placeholder="Искать здесь...">
+          <button type="submit"></button>
+        </form>
       </div>
     </div>
   </section>
