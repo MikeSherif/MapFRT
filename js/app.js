@@ -156,3 +156,47 @@ form.addEventListener("submit", (event) => {
     setTimeout(closePopup, 2000);
   }
 });
+
+const input = document.querySelector('.real-estate-form-input');
+const dropdown = document.querySelector('.dropdown-search');
+const listItems = document.querySelectorAll('.dropdown-search-list-item');
+
+// Function to show the dropdown
+function showDropdown() {
+  dropdown.classList.add('show');
+}
+
+// Function to hide the dropdown
+function hideDropdown() {
+  dropdown.classList.remove('show');
+}
+
+// Show dropdown when input is focused
+input.addEventListener('focus', showDropdown);
+
+// Hide dropdown when input loses focus
+input.addEventListener('blur', hideDropdown);
+
+// Handle Escape key press
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && input === document.activeElement) {
+    hideDropdown();
+    input.blur();
+  }
+});
+
+// Prevent dropdown from hiding when clicking on items
+listItems.forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+});
+
+// Handle item selection
+listItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    input.value = this.textContent;
+    hideDropdown();
+    input.blur();
+  });
+});
