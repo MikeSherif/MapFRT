@@ -84,6 +84,13 @@ let select = function () {
     item.addEventListener('click', selectChoose)
   });
 
+  document.addEventListener('click', function(event) {
+    let dropdown = document.querySelector('.select.is-active');
+    if (dropdown && !dropdown.contains(event.target)) {
+      dropdown.classList.remove('is-active');
+    }
+  });
+
   function selectToggle() {
     this.parentElement.classList.toggle('is-active');
   }
