@@ -273,6 +273,11 @@ body {
 
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 
 #map > svg > g > path:hover {
   fill: #FF6224;
@@ -714,8 +719,49 @@ p {
 }
 
 .real-estate-buy {
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
   margin-top: 200px;
 }
+
+.real-estate-buy-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-auto-rows: 408px;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.real-estate-buy-item {
+  font-family: "Montserrat", Montserrat, sans-serif;
+  color: rgb(43, 56, 136);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.real-estate-buy-item-image {
+  width: 369px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.real-estate-buy-item-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.real-estate-buy-item-title {
+  align-self: start;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 36px;
+}
+
+
 
 
 
