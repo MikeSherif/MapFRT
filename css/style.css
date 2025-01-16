@@ -551,6 +551,100 @@ p {
   cursor: pointer;
 }
 
+/*Попап*/
+.need-help-popup {
+
+  width: 1072px;
+  height: 664px;
+  background: #4AC68E;
+  border-radius: 20px;
+}
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 80px;
+  box-sizing: border-box;
+}
+
+.popup__title {
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat", Montserrat, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.popup__input {
+  font-family: "Montserrat", Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 270.65px;
+  height: 70px;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  border-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.popup__input::placeholder, .popup__textarea::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 28px;
+}
+
+.popup__input:focus-visible, .popup__textarea:focus-visible {
+  outline: none;
+}
+
+.popup__textarea::placeholder {
+  padding-top: 20px;
+}
+
+.popup__textarea {
+  font-family: "Montserrat", Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 909.33px;
+  height: 180px;
+  border-radius: 20px;
+  border: 0;
+  background: rgb(255, 255, 255);
+  border-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.popup__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 389px;
+  height: 70px;
+  border-radius: 20px;
+  background: rgb(253, 177, 78);
+  border-color: transparent;
+  padding: 0;
+  margin: auto;
+  cursor: pointer;
+}
 
 
 
