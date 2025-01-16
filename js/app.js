@@ -1,4 +1,4 @@
-const paths = document.querySelectorAll('svg path');
+const paths = document.querySelectorAll('.map svg path');
 const popup = document.querySelector('.popup');
 const popupTitle = popup.querySelector('#popup-title');
 

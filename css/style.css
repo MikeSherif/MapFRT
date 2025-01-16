@@ -171,9 +171,9 @@ textarea {
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -274,7 +274,7 @@ body {
 }
 
 
-#map>svg>g>path:hover {
+#map > svg > g > path:hover {
   fill: #FF6224;
 }
 
@@ -311,7 +311,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border:1px solid #FF6224;
+  border: 1px solid #FF6224;
   border-radius: 20px;
 }
 
@@ -418,7 +418,7 @@ p {
   scrollbar-shadow-color: #222222;*/
 }
 
-.select.is-chosen .select__current{
+.select.is-chosen .select__current {
   background: #FF6224;
   color: #fff;
 }
@@ -435,6 +435,7 @@ p {
   width: 100%;
   height: 100%;
 }
+
 .select__current {
   display: flex;
   align-items: center;
@@ -449,6 +450,7 @@ p {
   border: 1px solid rgb(173, 173, 173);
   border-radius: 20px;
 }
+
 .select__icon {
   display: flex;
   align-items: center;
@@ -467,6 +469,7 @@ p {
   top: 78px;
 
 }
+
 .select__item-list {
   display: flex;
   gap: 12px;
@@ -510,16 +513,42 @@ p {
 }
 
 .real-estate-search-controls-zhilcomplex-search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 594px;
   height: 60px;
-    font-size: 28px;
-    text-align: center;
-    font-weight: 400;
-    color: #2B3888;
-    background-color: transparent;
-    border: 1px solid rgb(173, 173, 173);
-    padding: 13px 0;
-    border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 28px;
+  color: #2B3888;
+  background-color: transparent;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 20px;
+  padding: 0 16px 0 21px;
+}
+
+.real-estate-form-input {
+  font-family: "Montserrat", Montserrat, sans-serif;
+  width: 440px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #2B3888;
+  border: none;
+}
+
+.real-estate-form-input:focus-visible {
+  outline: none;
+}
+
+.real-estate-form-input::placeholder {
+  color: #2B3888;
+}
+
+.real-estate-button-submit {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 
