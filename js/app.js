@@ -200,3 +200,39 @@ listItems.forEach(function(item) {
     input.blur();
   });
 });
+
+const buyList = document.querySelector('.real-estate-buy-list');
+const showAllButton = document.querySelector('.real-estate-buy-show-all-button');
+const buyCountSpan = document.querySelector('.real-estate-buy-count');
+
+// Function to initialize the list and button
+function initializeList() {
+  const items = buyList.querySelectorAll('.real-estate-buy-item');
+  const totalItems = items.length;
+
+  // Update the count in the button
+  buyCountSpan.textContent = totalItems;
+
+  // If there are more than 6 items, hide the extras and show the button
+  if (totalItems > 6) {
+    for (let i = 6; i < totalItems; i++) {
+      items[i].style.display = 'none'; // Hide items beyond the first 6
+    }
+    showAllButton.style.display = 'block'; // Show the button
+  } else {
+    showAllButton.style.display = 'none'; // Hide the button if there are 6 or fewer items
+  }
+}
+
+// Function to show all items when the button is clicked
+function showAllItems() {
+  const items = buyList.querySelectorAll('.real-estate-buy-item');
+  items.forEach(item => item.style.display = 'flex'); // Show all items
+  showAllButton.style.display = 'none'; // Hide the button after showing all items
+}
+
+// Event listener for the button
+showAllButton.addEventListener('click', showAllItems);
+
+// Initialize the list when the page loads
+initializeList();

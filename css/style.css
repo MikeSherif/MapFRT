@@ -517,6 +517,12 @@ p {
   background-color: #f2f2f2;
 }
 
+.real-estate-search {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .real-estate-search-controls-zhilcomplex-search {
   position: relative;
 }
@@ -759,6 +765,23 @@ p {
   font-size: 24px;
   font-weight: 900;
   line-height: 36px;
+}
+
+.real-estate-buy-show-all-button {
+  display: none;
+  font-family: "Montserrat", Montserrat, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 19.2px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 369px;
+  height: 39px;
+  background: #2B3888;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 10px;
 }
 
 
