@@ -459,7 +459,7 @@ p {
 }
 
 .select__body {
-
+  background: #ffffff;
   border: 1px solid rgb(173, 173, 173);
   border-radius: 20px;
   display: none;
@@ -552,12 +552,29 @@ p {
 }
 
 /*Попап*/
-.need-help-popup {
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
+  z-index: 999; /* Должен быть ниже, чем у попапа */
+}
 
+.need-help-popup {
+  display: none;
   width: 1072px;
   height: 664px;
   background: #4AC68E;
   border-radius: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Указываем высокий z-index для отображения поверх остальных элементов */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для эффекта */
 }
 
 .popup__content {
@@ -644,6 +661,13 @@ p {
   padding: 0;
   margin: auto;
   cursor: pointer;
+}
+
+.popup__message {
+  width: 920px;
+  margin-inline: auto;
+  margin-top: 130px;
+  text-align: center;
 }
 
 

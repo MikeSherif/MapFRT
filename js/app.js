@@ -99,5 +99,60 @@ let select = function () {
 
 };
 
-
 select();
+
+const popupHelp = document.querySelector(".need-help-popup");
+const popupOverlay = document.querySelector(".popup-overlay");
+const openButton = document.querySelector(".searching-advantages-help");
+const popupContent = popupHelp.querySelector(".popup__content");
+const form = popupHelp.querySelector(".popup__form");
+const body = document.body;
+
+// Функция открытия попапа
+const openPopup = () => {
+  popupHelp.style.display = "block";
+  popupOverlay.style.display = "block";
+  body.style.overflow = "hidden";
+  body.style.overflow = "hidden"; // Блокировка прокрутки фона
+  body.style.backdropFilter = "blur(5px)"; // Размытие фона
+};
+
+// Функция закрытия попапа
+const closePopup = () => {
+  popupHelp.style.display = "none";
+  popupOverlay.style.display = "none";
+  body.style.overflow = ""; // Разблокировка прокрутки фона
+  body.style.backdropFilter = ""; // Удаление размытия фона
+};
+
+// Открытие попапа при клике на кнопку
+openButton.addEventListener("click", openPopup);
+
+popupOverlay.addEventListener("click", closePopup);
+
+// Обработка отправки формы
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Отменяем стандартное поведение формы
+
+  // Проверка валидности полей (можно заменить на более сложную валидацию)
+  const inputs = form.querySelectorAll("input, textarea");
+  let isValid = true;
+  inputs.forEach((input) => {
+    if (!input.checkValidity()) {
+      isValid = false;
+    }
+  });
+
+  if (isValid) {
+    // Замена контента на сообщение
+    popupContent.innerHTML = `
+          <div class="popup__message">
+          <h2 class="popup__title" style="text-align: center; line-height: 36px">Спасибо! Ваше обращение принято.</h2>
+          <p class="popup__title" style="text-align: center; line-height: 36px">С вами свяжется менеджер по подбору недвижимости.</p>
+          </div>
+        `;
+
+    // Закрытие попапа через 2 секунды
+    setTimeout(closePopup, 2000);
+  }
+});
