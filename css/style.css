@@ -259,9 +259,7 @@ ul, li {
   padding: 0;
   margin: 0;
 }
-html {
-  width: 1920px;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -272,7 +270,6 @@ body {
 
 .container {
   max-width: 1248px;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -636,6 +633,7 @@ p {
 .popup__content {
   display: flex;
   flex-direction: column;
+  gap: 28px;
   padding: 60px 80px;
   box-sizing: border-box;
 }

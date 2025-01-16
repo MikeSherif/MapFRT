@@ -108,6 +108,18 @@ const popupContent = popupHelp.querySelector(".popup__content");
 const form = popupHelp.querySelector(".popup__form");
 const body = document.body;
 
+
+const centerPopup = () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop; // Current scroll position
+  const windowHeight = window.innerHeight; // Viewport height
+  const popupHeight = popupHelp.offsetHeight; // Popup height
+
+  // Calculate the top position to center the popup vertically
+  const topPosition = scrollTop + (windowHeight / 2) - (popupHeight / 12);
+
+  // Set the popup's top position
+  popupHelp.style.top = `${topPosition}px`;
+};
 // Функция открытия попапа
 const openPopup = () => {
   popupHelp.style.display = "block";
@@ -115,6 +127,7 @@ const openPopup = () => {
   body.style.overflow = "hidden";
   body.style.overflow = "hidden"; // Блокировка прокрутки фона
   body.style.backdropFilter = "blur(5px)"; // Размытие фона
+  centerPopup();
 };
 
 // Функция закрытия попапа
