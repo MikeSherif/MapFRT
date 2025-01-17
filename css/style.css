@@ -710,6 +710,7 @@ p {
   background: rgb(255, 255, 255);
   padding: 28px;
   margin: 0;
+  resize: none;
 }
 
 .popup__button {
