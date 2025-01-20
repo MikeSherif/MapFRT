@@ -806,7 +806,6 @@ p {
 .real-estate-buy-list {
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-auto-rows: 408px;
   gap: 18px;
   justify-content: space-between;
 }
@@ -832,6 +831,13 @@ p {
 .real-estate-buy-item-description {
   display: flex;
   flex-direction: column;
+}
+
+.real-estate-buy-item-description-address-text, .real-estate-buy-item-description-price-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
 }
 
 .real-estate-buy-item-title {
