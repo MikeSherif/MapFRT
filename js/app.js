@@ -57,6 +57,23 @@ paths.forEach(path => {
   path.addEventListener('mouseout', hidePopup);
 });
 
+//Навигация
+const menuItems = document.querySelectorAll('.mini__header-content-nav-element');
+
+if (menuItems.length > 1) {
+  const svgArrow = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="15" viewBox="0 0 5 15" fill="none">
+        <path d="M4.57031 7.82031C4.6224 7.8724 4.64844 7.93229 4.64844 8C4.64844 8.06771 4.6224 8.1276 4.57031 8.17969L0.929688 11.8203C0.877604 11.8724 0.817708 11.8984 0.75 11.8984C0.682292 11.8984 0.622396 11.8724 0.570312 11.8203L0.179688 11.4297C0.127604 11.3776 0.101562 11.3177 0.101562 11.25C0.101562 11.1823 0.127604 11.1224 0.179688 11.0703L3.25 8L0.179688 4.92969C0.127604 4.8776 0.101562 4.81771 0.101562 4.75C0.101562 4.68229 0.127604 4.6224 0.179688 4.57031L0.570312 4.17969C0.622396 4.1276 0.682292 4.10156 0.75 4.10156C0.817708 4.10156 0.877604 4.1276 0.929688 4.17969L4.57031 7.82031Z" fill="#B5BDC2" style="fill:#B5BDC2;fill:color(display-p3 0.7098 0.7412 0.7608);fill-opacity:1;"/>
+    </svg>
+    `;
+
+  menuItems.forEach((item, index) => {
+    if (index > 0) {
+      item.insertAdjacentHTML('beforebegin', svgArrow);
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('open-select');
   const select = document.getElementById('region-select');
