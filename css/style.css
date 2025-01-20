@@ -806,7 +806,7 @@ p {
 
 .real-estate-buy-list {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, clamp(9.375rem, 2.6786rem + 28.5714vw, 25rem));
   gap: 18px;
   justify-content: space-between;
 }
@@ -824,7 +824,7 @@ p {
 }
 
 .real-estate-buy-item-image {
-  width: 369px;
+  width: /*369px*/clamp(9.375rem, 3.5089rem + 25.0286vw, 23.0625rem);
   height: 250px;
   border-radius: 20px;
 }
