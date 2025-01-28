@@ -261,6 +261,7 @@ ul, li {
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   display: flex;
@@ -282,6 +283,7 @@ body::after {
 }
 
 .container {
+  padding: 0 26px;
   max-width: 1248px;
 }
 
@@ -316,7 +318,7 @@ h1, h2, h3, h4, h5, h6 {
 .mini__header-content-nav-element {
   color: rgb(0, 0, 0, 0.5);
   font-family: "Montserrat", Montserrat, sans-serif;
-  font-size: 12px;
+  font-size: clamp(0.4375rem, 0.3239rem + 0.5682vw, 0.75rem);
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0;
@@ -326,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
 .mini__header-content-title {
   color: rgb(22, 30, 112);
   font-family: "Montserrat", Montserrat, sans-serif;
-  font-size: 36.8px;
+  font-size: clamp(2rem, 1.8909rem + 0.5455vw, 2.3rem);
   font-weight: 500;
   line-height: 44.16px;
   letter-spacing: 0;
@@ -344,7 +346,7 @@ p {
 
 .page-description {
   color: #2B3888;
-  font-size: 24px;
+  font-size: clamp(0.875rem, 0.6477rem + 1.1364vw, 1.5rem);
   font-family: "Montserrat", Montserrat, sans-serif;
   font-weight: 400;
   line-height: 150%;
@@ -863,6 +865,43 @@ p {
   cursor: pointer;
   align-self: flex-end;
   margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .map {
+    display: none;
+  }
+  .real-estate-buy-list {
+    grid-template-columns: repeat(2, clamp(18.75rem, 16.4773rem + 11.3636vw, 25rem));
+    justify-content: center;
+  }
+
+  .real-estate-search-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .select, .real-estate-search-controls-region_choose, .real-estate-search-controls-zhilcomplex-search, .real-estate-search-controls-zhilcomplex-search-form {
+    width: 100%;
+  }
+
+  .real-estate-buy-item-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .real-estate-buy-list {
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+
+  .real-estate-search-controls-zhilcomplex-search {
+    display: none;
+  }
 }
 
 
