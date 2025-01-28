@@ -857,7 +857,7 @@ p {
   font-size: 19.2px;
   font-weight: 400;
   line-height: 24px;
-  width: 369px;
+  width: clamp(18.75rem, 17.1818rem + 7.8409vw, 23.0625rem);;
   height: 39px;
   background: #2B3888;
   border: 0;
@@ -901,6 +901,20 @@ p {
 
   .real-estate-search-controls-zhilcomplex-search {
     display: none;
+  }
+
+  .searching-advantages-help {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 100%;
+  }
+
+  .select__current {
+    font-size: 12px;
   }
 }
 
